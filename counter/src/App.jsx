@@ -18,9 +18,6 @@ function App() {
       setCount(0);
     }
   return (
-
-
-
     <>
       <div className="app">
         <h2>Counter App</h2>
