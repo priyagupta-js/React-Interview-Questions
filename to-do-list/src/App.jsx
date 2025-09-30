@@ -1,11 +1,11 @@
-
-
+// import todo from "./components/toDo"
+import Todo from "../src/components/Todo";
 function App() {
   
 
   return (
     <>
-      Hello world!
+    <Todo />
     </>
   )
 }
