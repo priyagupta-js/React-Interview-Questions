@@ -1,15 +1,26 @@
 import React, { useState } from "react";
 import "../../src/index.css";
 function Todo() {
+  // input value
   const [text, setText] = useState("");
+// to-do lists
+const [items,setItems] = useState([]);
 
   function onTextChange(e) {
+   
     setText(e.target.value);
-    console.log(e.target.value);
   }
 
   function onAdd(e) {
     e.preventDefault();
+    
+    // if there is nothing to inside the testbox;ignore the empty string 
+    if(text.trim() == "") return;
+    
+    setItems([...items, text]);
+
+    // clear the text-box
+    setText("");
   }
   return (
     <>
@@ -24,8 +35,14 @@ function Todo() {
             />
             <button>Add</button>
           </form>
+            
 
           <div className="display-text">
+          <ul>
+            {items.map((item , index) => (
+<li key={index}></li>
+            ))}
+          </ul>
           </div>
       </div>
 
@@ -34,3 +51,12 @@ function Todo() {
 }
 
 export default Todo;
+
+{/* 1. user types some text
+  2. user click on the add button
+  3. the test is displayed below in <ul><li></li><ul> form  
+  4. clear the textarea box*/}
+  // handle edge case 
+  //  what if the user does not type anything i.e text = "" 
+  //  what if the text contains uncessary space around 
+  
