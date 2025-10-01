@@ -38,9 +38,9 @@ const [items,setItems] = useState([]);
             
 
           <div className="display-text">
-          <ul>
+          <ul className="lists">
             {items.map((item , index) => (
-<li key={index}></li>
+<li key={index}>{item}</li>
             ))}
           </ul>
           </div>
