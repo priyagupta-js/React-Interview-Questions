@@ -13,13 +13,21 @@
     min-height:100vh;
 }
 
+.main-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .input-area
 {
     display: flex;
-    justify-content:center;
-    align-items: center;
+    /* flex-direction: ; */
     margin-top: 20px;
-    gap:20px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .input-area textarea
@@ -32,18 +40,15 @@
 
 button
 {
-font-size:20px ;
+font-size:15px ;
 padding: 10px 20px;
 }
-
-/* .display-text
+.lists
 {
-    display:flex;
-    justify-content: flex-start;
-} */
+    margin-top: 20px;
+    font-size: 20px;
+}
 
-/* .lists
-{
-display:flex;
-    justify-content: flex-start;
-} */
+.lists li{
+    padding: 5px;
+}
