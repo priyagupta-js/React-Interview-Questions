@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../../src/index.css";
+import { RxCross1} from "react-icons/rx";
+
 function Todo() {
   // input value
   const [text, setText] = useState("");
@@ -23,30 +25,32 @@ function Todo() {
   }
   return (
     <>
-      
       <div className="main">
-      <h1>To-do-list</h1>
-      <div className="main-wrapper">
-        
-        <div>
-          <form className="input-area" onSubmit={onAdd}>
-            <textarea
+        <h1>To-do-list</h1>
+        <div className="main-wrapper">
+          <div>
+            <form className="input-area" onSubmit={onAdd}>
+              <textarea
                 rows={5}
                 onChange={onTextChange}
                 placeholder="Type here.."
                 value={text}
               />
               <button>Add</button>
-          </form>
-        </div>
-        <div className="display-area">
-          <ul className="lists">
+            </form>
+          </div>
+          <div className="display-area">
+            <ul className="lists">
               {items.map((item, index) => (
-                <li key={index}>{item}</li>
+                <>
+                {/* <input type="checkbox"/> */}
+                  <li key={index}>{item}</li>
+                  {/* <RxCross1 /> */}
+                </>
               ))}
             </ul>
+          </div>
         </div>
-      </div>
       </div>
     </>
   );
@@ -64,7 +68,8 @@ export default Todo;
 //  what if the user does not type anything i.e text = ""
 //  what if the text contains uncessary space around
 
-{/* <div className="main">
+{
+  /* <div className="main">
         <h1>To-do-list App</h1>
         <form className="text-area" onSubmit={onAdd}>
           <div className="text-wrapper">
@@ -84,4 +89,5 @@ export default Todo;
             </ul>
           </div>
         </form>
-      </div> */}
+      </div> */
+}
