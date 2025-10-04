@@ -7,6 +7,7 @@ function Todo() {
   const [text, setText] = useState("");
   // to-do lists
   const [items, setItems] = useState([]);
+  const [checked,setChecked] = useState(false);
 
   function onTextChange(e) {
     setText(e.target.value);
@@ -42,11 +43,11 @@ function Todo() {
           <div className="display-area">
             <ul className="lists">
               {items.map((item, index) => (
-                <>
-                {/* <input type="checkbox"/> */}
-                  <li key={index}>{item}</li>
-                  {/* <RxCross1 /> */}
-                </>
+                <li key={index} className="list-item">
+                <input type="checkbox" />
+                {item}
+                {/* <RxCross1 /> */}
+                </li>
               ))}
             </ul>
           </div>
