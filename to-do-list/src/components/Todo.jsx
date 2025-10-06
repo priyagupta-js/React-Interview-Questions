@@ -93,3 +93,6 @@ export default Todo;
         </form>
       </div> */
 }
+
+// create an array - to store all the taks given by the user.
+// and in that array check for checked Item (boolean - true/false)
