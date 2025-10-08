@@ -44,7 +44,7 @@ function Todo() {
             <ul className="lists">
               {items.map((item, index) => (
                 <li key={index} className="list-item">
-                {/* {isChecked ? "checked" : ""} */}
+                {isChecked ? "checked" : ""}
                 <input type="checkbox" />
                 {item}
                 {/* <RxCross1 /> */}
