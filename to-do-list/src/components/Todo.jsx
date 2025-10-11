@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "../../src/index.css";
-import { RxCross1} from "react-icons/rx";
+// import { RxCross1} from "react-icons/rx";
 
 function Todo() {
   // input value
   const [text, setText] = useState("");
   // to-do lists
   const [items, setItems] = useState([]);
-  const [isChecked,setIsChecked] = useState(false);
+  // const [isChecked,setIsChecked] = useState(false);
 
   function onTextChange(e) {
     setText(e.target.value);
@@ -42,8 +42,9 @@ function Todo() {
           </div>
           <div className="display-area">
             <ul className="lists">
-              {items.map((item, index) => (
-                <li key={index} className="list-item">
+            {items.length === 0 && <p className="no tasks">No tasks yet</p>}
+              {items.map(item => (
+                <li key={item.id} className="list-item">
                 {/* {isChecked ? "checked" : ""} */}
                 <input type="checkbox" />
                 {item}
