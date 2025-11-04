@@ -45,7 +45,7 @@ function Todo() {
             {items.length === 0 && <p className="no tasks">No tasks yet</p>}
               {items.map(item => (
                 <li key={item.id} className="list-item">
-                {isChecked ? "checked" : ""}
+                {/* {isChecked ? "checked" : ""} */}
                 <input type="checkbox" />
                 {item}
                 {/* <RxCross1 /> */}
